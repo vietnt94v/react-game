@@ -27,7 +27,10 @@ const Grid = ({ ...props }) => {
                       key={indexRow}
                       className='bg-indigo-900 w-8 aspect-square flex items-center justify-center '
                     >
-                      <span className='opacity-50'>{`${indexRow + 1} ${indexCol + 1}`}</span>
+                      <span
+                        className='opacity-50'
+                        style={{ fontSize: '10px' }}
+                      >{`${indexRow + 1} ${indexCol + 1}`}</span>
                     </div>
                   ))}
               </div>

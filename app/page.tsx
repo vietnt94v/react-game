@@ -10,13 +10,15 @@ export default function Home() {
     direction: TankDirection.Bottom,
   });
 
-  const handleDirectionTank = () => {};
+  const handleDirectionTank = () => {
+    console.log('move');
+  };
 
   return (
     <main className='font-mono'>
       <div className='relative'>
         <Grid width={30} height={15} />
-        <Tank config={configTank} />
+        <Tank config={configTank}/>
       </div>
     </main>
   );
