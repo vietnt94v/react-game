@@ -10,8 +10,8 @@ const Tank = ({ config }: TankProps) => {
 
   const getTankStyle = () => {
     const positionStyle = {
-      top: (config.position.y - 1) * (tank.size + tank.gap),
-      left: (config.position.x - 1) * (tank.size + tank.gap),
+      top: (config.position.y - 2) * (tank.size + tank.gap),
+      left: (config.position.x - 2) * (tank.size + tank.gap),
     };
 
     const colorStyle = {
@@ -45,8 +45,8 @@ const Tank = ({ config }: TankProps) => {
 
   return (
     <>
-      <div className='🚙 absolute' style={getTankStyle()}>
-        <div className='grid grid-cols-3 gap-1 place-content-center'>
+      <div className="absolute" style={getTankStyle()}>
+        <div className="grid grid-cols-3 gap-1 place-content-center">
           {Array(6)
             .fill('')
             .map((_, index) => (
@@ -62,7 +62,7 @@ const Tank = ({ config }: TankProps) => {
                     : ''
                 }
               >
-                <div className='flex justify-center items-center border border-red-500 bg-red-900 w-8 aspect-square'>
+                <div className="flex justify-center items-center border border-red-500 bg-red-900 w-8 aspect-square">
                   {index + 1}
                 </div>
               </div>
